@@ -1,0 +1,34 @@
+
+dataset_name = blender
+datadir = ./data/head
+expname =  head
+dataset = head
+basedir = ./log
+
+n_iters = 30000
+batch_size = 4096
+
+N_voxel_init = 2097156 # 128**3
+N_voxel_final = 16777216 # 300**3
+upsamp_list = [2000,3000,4000,5500,7000]
+update_AlphaMask_list = [2000,4000]
+
+N_vis = 3
+vis_every = 5000
+
+render_test = 1
+
+n_lamb = [16,16,16]
+model_name = ReVolVE
+
+shadingMode = MLP_Fea
+fea2denseAct = softplus
+
+view_pe = 2
+fea_pe = 2
+
+L1_weight_inital = 0
+L1_weight_rest = 0
+rm_weight_mask_thre = 1e-4
+
+TV_weight = 1.0
