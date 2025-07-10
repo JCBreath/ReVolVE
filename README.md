@@ -21,10 +21,52 @@ python -m pip install numpy==1.24
 ## Dataset Preparation
 This project follows the [NeRF](https://www.matthewtancik.com/nerf) synthetic dataset format based on Blender scenes.
 
-A sample dataset is included in this repository for demonstration purposes.
+A sample dataset *head* is included in this repository for demonstration purposes.
 
-## Training
-Please follow commands to execute training script
+## Quick Start
+
+### Training
+
+To train a ReVolVE model, run:
+
 ```bash
-python train.py --config configs/head.txt
+python main.py --mode train --config configs/head.txt
 ```
+
+The trained model will be saved by default at `log/head/head.th`
+
+### Evaluation
+
+After the model is trained, run:
+
+```bash
+python main.py --mode render_test --config configs/head.txt --ckpt log/head/head.th
+```
+
+The output will be saved at `log/head/render_output`
+
+### Render with Enhancement
+
+To render with enhancement enabled, run:
+
+```bash
+python main.py --mode render_test --enhanced --config configs/head.txt --ckpt log/head/head.th
+```
+
+Enhanced output will be saved at `log/head/enhanced_output`
+
+### Export
+
+**Export volume:**
+
+```bash
+python main.py --mode export_volume --config configs/head.txt --ckpt log/head/head.th
+```
+
+**Export mesh:**
+
+```bash
+python main.py --mode export_mesh --config configs/head.txt --ckpt log/head/head.th
+```
+
+Exported files (volume and mesh) will be saved by default at `log/head/exported_files`
