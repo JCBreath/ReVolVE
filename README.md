@@ -70,3 +70,6 @@ python main.py --mode export_mesh --config configs/head.txt --ckpt log/head/head
 ```
 
 Exported files (volume and mesh) will be saved by default at `log/head/exported_files`
+
+## Acknowledgements
+This research was supported in part by the U.S. National Science Foundation through grants IIS-1955395, IIS-2101696, OAC-2104158, and IIS-2401144, and the U.S. Department of Energy through grant DE-SC0023145.
