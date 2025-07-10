@@ -71,5 +71,16 @@ python main.py --mode export_mesh --config configs/head.txt --ckpt log/head/head
 
 Exported files (volume and mesh) will be saved by default at `log/head/exported_files`
 
+## Citation
+```
+@article{Yao-ReVolVE-CG25,
+  title = {{ReVolVE}: Neural representation of volumes for visualization enhancement of direct volume rendering},
+  journal = {Computers \& Graphics},
+  year = {2025},
+  author = {Siyuan Yao and Chaoli Wang},
+  note = {Accepted}
+}
+```
+
 ## Acknowledgements
 This research was supported in part by the U.S. National Science Foundation through grants IIS-1955395, IIS-2101696, OAC-2104158, and IIS-2401144, and the U.S. Department of Energy through grant DE-SC0023145.
